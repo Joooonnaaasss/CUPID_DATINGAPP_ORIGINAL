@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="CUPID_DATINGAPP.Log"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CUPID_DATINGAPP"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <!-- Setzt den Hintergrund des Grids auf Transparent -->
+    <Grid Background="Transparent">
+
+        <!-- Outer Border to encapsulate all controls -->
+        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="15" Padding="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" Width="200">
+
+                <!-- Username Input Box with Subtle Border -->
+                <Border Background="#F7F7F7" CornerRadius="8" Width="200" Height="40" Margin="0,5,0,5" BorderBrush="#E0E0E0" BorderThickness="1">
+                    <TextBox x:Name="UserTextBox" 
+             Text="Benutzername" 
+             Padding="10" 
+             FontFamily="Segoe UI" 
+             FontSize="14" 
+             Foreground="#999999" 
+             BorderThickness="0" 
+             VerticalContentAlignment="Center" 
+             GotFocus="UserTextBox_GotFocus" 
+             LostFocus="UserTextBox_LostFocus" 
+             Background="{x:Null}" />
+                </Border>
+
+                <Border Background="#F7F7F7" CornerRadius="8" Width="200" Height="40" Margin="0,5,0,5" BorderBrush="#E0E0E0" BorderThickness="1">
+                    <TextBox x:Name="PasswordBox" 
+             Text="Password" 
+             Padding="10" 
+             FontFamily="Segoe UI" 
+             FontSize="14" 
+             Foreground="#999999" 
+             BorderThickness="0" 
+             VerticalContentAlignment="Center" 
+             GotFocus="PasswordBox_GotFocus" 
+             LostFocus="PasswordBox_LostFocus" 
+             Background="{x:Null}"/>
+                </Border>
+
+                <!-- Login Button with Rounded Border -->
+                <Border Background="#007AFF" CornerRadius="8" Width="200" Height="40" Margin="0,5,0,5">
+                    <Button x:Name="AnmeldenButton" 
+                            Content="Anmelden" 
+                            FontFamily="Segoe UI" 
+                            FontSize="14" 
+                            Foreground="White" 
+                            BorderThickness="0" 
+                            Background="Transparent"
+                            Click="AnmeldenButton_Click" 
+                            VerticalAlignment="Center"/>
+                </Border>
+
+                <!-- Register Button with Rounded Border -->
+                <Border Background="#34C759" CornerRadius="8" Width="200" Height="40" Margin="0,5,0,5">
+                    <Button x:Name="RegestrierungsButton" 
+                            Content="Registrieren" 
+                            FontFamily="Segoe UI" 
+                            FontSize="14" 
+                            Foreground="White" 
+                            BorderThickness="0" 
+                            Background="Transparent"
+                            Click="Button_Click" 
+                            VerticalAlignment="Center"/>
+                </Border>
+
+                <!-- Password Forgotten Link -->
+                <TextBlock x:Name="PasswordVergessen" 
+                           HorizontalAlignment="Center" 
+                           TextWrapping="Wrap" 
+                           FontSize="12" 
+                           FontFamily="Segoe UI" 
+                           Foreground="#007AFF" 
+                           MouseDown="PasswordForget"
+                           Margin="0,10,0,0">
+                    <Run Language="de-de" Text="Passwort vergessen"/>
+                </TextBlock>
+
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>

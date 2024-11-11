@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="CUPID_DATINGAPP.UserData2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CUPID_DATINGAPP"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <!-- Outer Border for a centralized layout -->
+        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="15" Padding="15" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" Width="250">
+
+                <!-- Username Input Box -->
+                <Border Background="#F7F7F7" CornerRadius="8" Width="250" Height="35" Margin="0,5,0,5" BorderBrush="#E0E0E0" BorderThickness="1">
+                    <TextBox x:Name="UsernameTextBox" 
+                             Text="Benutzername" 
+                             Padding="8" 
+                             FontFamily="Segoe UI" 
+                             FontSize="13" 
+                             Foreground="#333333" 
+                             BorderThickness="0" 
+                             VerticalContentAlignment="Center"/>
+                </Border>
+
+                <!-- Zielgruppe ComboBox -->
+                <Border Background="#F7F7F7" CornerRadius="8" Width="250" Height="35" Margin="0,5,0,5" BorderBrush="#E0E0E0" BorderThickness="1">
+                    <ComboBox x:Name="TargetAudienceComboBox" 
+                              Padding="8" 
+                              FontFamily="Segoe UI" 
+                              FontSize="13" 
+                              Foreground="#333333" 
+                              BorderThickness="0"
+                              VerticalContentAlignment="Center">
+                        <ComboBoxItem Content="Männlich"/>
+                        <ComboBoxItem Content="Weiblich"/>
+                        <ComboBoxItem Content="Divers"/>
+                    </ComboBox>
+                </Border>
+
+                <!-- Foto hochladen Button -->
+                <Border Background="#F7F7F7" CornerRadius="8" Width="250" Height="35" Margin="0,5,0,5" BorderBrush="#E0E0E0" BorderThickness="1">
+                    <Button x:Name="UploadPhotoButton" 
+                            Content="Foto hochladen" 
+                            FontFamily="Segoe UI" 
+                            FontSize="13" 
+                            Foreground="#333333" 
+                            BorderThickness="0" 
+                            Background="Transparent" 
+                            VerticalAlignment="Center"/>
+                </Border>
+
+                <!-- Biografie Input Box -->
+                <Border Background="#F7F7F7" CornerRadius="8" Width="250" Height="70" Margin="0,5,0,5" BorderBrush="#E0E0E0" BorderThickness="1">
+                    <TextBox x:Name="BiographyTextBox" 
+                             Text="Biografie" 
+                             Padding="8" 
+                             FontFamily="Segoe UI" 
+                             FontSize="13" 
+                             Foreground="#333333" 
+                             BorderThickness="0" 
+                             AcceptsReturn="True" 
+                             VerticalScrollBarVisibility="Auto" 
+                             MaxLength="200"/>
+                </Border>
+
+                <!-- Hinweistext unter Biografie-Box -->
+                <TextBlock Text="Maximal 200 Zeichen" 
+                           FontFamily="Segoe UI" 
+                           FontSize="12" 
+                           Foreground="#888888" 
+                           HorizontalAlignment="Left"
+                           Margin="10,0,0,10"/>
+
+                <!-- Speichern Button -->
+                <Border Background="#007AFF" CornerRadius="8" Width="250" Height="35" Margin="0,10,0,5">
+                    <Button x:Name="SaveButton" 
+                            Content="Speichern" 
+                            FontFamily="Segoe UI" 
+                            FontSize="13" 
+                            Foreground="White" 
+                            BorderThickness="0" 
+                            Background="Transparent" 
+                            Click="SaveButton_Click" 
+                            VerticalAlignment="Center"/>
+                </Border>
+
+                <!-- Abbrechen Button -->
+                <Border Background="#FF3B30" CornerRadius="8" Width="250" Height="35" Margin="0,5,0,5">
+                    <Button x:Name="CancelButton" 
+                            Content="Abbrechen" 
+                            FontFamily="Segoe UI" 
+                            FontSize="13" 
+                            Foreground="White" 
+                            BorderThickness="0" 
+                            Background="Transparent" 
+                            Click="CancelButton_Click" 
+                            VerticalAlignment="Center"/>
+                </Border>
+
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>

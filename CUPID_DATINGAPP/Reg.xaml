@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="CUPID_DATINGAPP.Reg"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CUPID_DATINGAPP"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <!-- Outer Border for a centralized layout -->
+        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="15" Padding="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" Width="200">
+
+                <!-- Vorname Input Box -->
+                <Border CornerRadius="8" Width="200" Height="40" Margin="0,5,0,5" BorderBrush="#E0E0E0" BorderThickness="1">
+                    <TextBox x:Name="VornameTextBox" 
+                             Text="First name" 
+                             Padding="10" 
+                             FontFamily="Segoe UI" 
+                             FontSize="14" 
+                             Foreground="#333333" 
+                             BorderThickness="0" 
+                             VerticalContentAlignment="Center" 
+                             TextChanged="VornameTextBox_TextChanged"/>
+                </Border>
+
+                <!-- Nachname Input Box -->
+                <Border CornerRadius="8" Width="200" Height="40" Margin="0,5,0,5" BorderBrush="#E0E0E0" BorderThickness="1">
+                    <TextBox x:Name="NachnameTextBox" 
+                             Text="Surname" 
+                             Padding="10" 
+                             FontFamily="Segoe UI" 
+                             FontSize="14" 
+                             Foreground="#333333" 
+                             BorderThickness="0" 
+                             VerticalContentAlignment="Center" 
+                             TextChanged="NachnameTextBox_TextChanged"/>
+                </Border>
+
+                <!-- E-Mail Input Box -->
+                <Border CornerRadius="8" Width="200" Height="40" Margin="0,5,0,5" BorderBrush="#E0E0E0" BorderThickness="1">
+                    <TextBox x:Name="MailTextBox" 
+                             Text="E-Mail" 
+                             Padding="10" 
+                             FontFamily="Segoe UI" 
+                             FontSize="14" 
+                             Foreground="#333333" 
+                             BorderThickness="0" 
+                             VerticalContentAlignment="Center" 
+                             TextChanged="MailTextBox_TextChanged"/>
+                </Border>
+
+                <!-- Date of Birth Input Box -->
+                <Border CornerRadius="8" Width="200" Height="40" Margin="0,5,0,5" BorderBrush="#E0E0E0" BorderThickness="1">
+                    <TextBox x:Name="DateOfBirthTextBox" 
+                             Text="Geburtsdatum (DD/MM/YYYY)" 
+                             Padding="10" 
+                             FontFamily="Segoe UI" 
+                             FontSize="14" 
+                             Foreground="#333333" 
+                             BorderThickness="0" 
+                             VerticalContentAlignment="Center"/>
+                </Border>
+
+                <!-- Gender ComboBox -->
+                <Border CornerRadius="8" Width="200" Height="40" Margin="0,5,0,5" BorderBrush="#E0E0E0" BorderThickness="1">
+                    <ComboBox x:Name="GenderComboBox" 
+                              FontFamily="Segoe UI" 
+                              FontSize="14" 
+                              Foreground="#333333" 
+                              BorderThickness="0" 
+                              VerticalContentAlignment="Center">
+                        <ComboBoxItem Content="Männlich"/>
+                        <ComboBoxItem Content="Weiblich"/>
+                        <ComboBoxItem Content="Divers"/>
+                    </ComboBox>
+                </Border>
+
+                <!-- Next Button -->
+                <Border Background="#007AFF" CornerRadius="8" Width="200" Height="40" Margin="0,10,0,5">
+                    <Button x:Name="NextClick" 
+                            Content="Next" 
+                            FontFamily="Segoe UI" 
+                            FontSize="14" 
+                            Foreground="White" 
+                            BorderThickness="0" 
+                            Background="Transparent" 
+                            Click="Button_Click" 
+                            VerticalAlignment="Center"/>
+                </Border>
+
+                <!-- Zurück zum Login Button -->
+                <Border Background="#34C759" CornerRadius="8" Width="200" Height="40" Margin="0,10,0,5">
+                    <Button x:Name="BackToLoginButton" 
+                            Content="Zurück zum Login" 
+                            FontFamily="Segoe UI" 
+                            FontSize="14" 
+                            Foreground="White" 
+                            BorderThickness="0" 
+                            Background="Transparent" 
+                            Click="BackToLogin_Click" 
+                            VerticalAlignment="Center"/>
+                </Border>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
